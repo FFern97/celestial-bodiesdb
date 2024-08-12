@@ -18,4 +18,7 @@ postgres=> CREATE TABLE moon (moon_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(
 planet_id INT, CONSTRAINT fk_planet FOREING KEY(planet_id) REFERENCES planet(planet_id)); 
 
 postgres=> CREATE TABLE black_hole(black_hole_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, age_in million_years NUMERIC, distance_from_earth NUMERIC,
-galaxy_id INT, CONSTRAINT fk_galaxy FOREING KEY(galaxy_id) REFERENCES galaxy(galaxy_id)); 
+galaxy_id INT); 
+
+universe=> INSERT INTO galaxy() VALUES(''); 
+ 
