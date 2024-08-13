@@ -5,7 +5,7 @@ CREATE DATABASE universe;
 \c universe; 
 
 
-CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR NOT NULL UNIQUE, description TEXT, has_life BOOLEAN, age_in_million_years INT);
+CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, description TEXT, has_life BOOLEAN, age_in_million_years INT);
 
 
 CREATE TABLE star (star_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, age_in_million_years NUMERIC, size_in_km INT NOT NULL, mass INT, galaxy_id INT, 
@@ -89,7 +89,7 @@ INSERT INTO black_hole (name, age_in_million_years, distance_from_earth, galaxy_
 
      ('BLACKHOLE1', 4526, 178986, 5),
      ('BLACKHOLE2', 12356, 156231, 4),
-     ('BLACKHOLE3', 2356, 132547, '3),
+     ('BLACKHOLE3', 2356, 132547, 3),
      ('BLACKHOLE4', 9756, 182463, 1),
      ('BLACKHOLE5', 7784, 145672, 2),
      ('BLACKHOLE6', 6921, 135789, 6); 
