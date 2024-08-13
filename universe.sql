@@ -5,19 +5,19 @@ CREATE DATABASE universe;
 \c universe; 
 
 
-CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, description VARCHAR (255), has_life BOOLEAN, age_in_million_years INT);
+CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, description VARCHAR (255), has_life BOOLEAN, age_in_million_years INT);
 
 
-CREATE TABLE star (star_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, age_in_million_years NUMERIC, size_in_km INT NOT NULL, mass INT, galaxy_id INT, 
+CREATE TABLE star (star_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, age_in_million_years NUMERIC, size_in_km INT NOT NULL, mass INT, galaxy_id INT, 
 CONSTRAINT fk_galaxy FOREIGN KEY(galaxy_id) REFERENCES galaxy(galaxy_id));
 
-CREATE TABLE planet (planet_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, has_life BOOLEAN, 
+CREATE TABLE planet (planet_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, has_life BOOLEAN, 
 size_in_km INT NOT NULL, been_explored BOOLEAN, star_id INT, CONSTRAINT fk_star FOREIGN KEY(star_id) REFERENCES star(star_id)); 
 
-CREATE TABLE moon (moon_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, distance_from_planet NUMERIC, size_in_km INT,
+CREATE TABLE moon (moon_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, distance_from_planet NUMERIC, size_in_km INT,
 planet_id INT, CONSTRAINT fk_planet FOREIGN KEY(planet_id) REFERENCES planet(planet_id)); 
 
-CREATE TABLE black_hole(black_hole_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL, age_in_million_years NUMERIC, distance_from_earth NUMERIC,
+CREATE TABLE black_hole(black_hole_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, age_in_million_years NUMERIC, distance_from_earth NUMERIC,
 galaxy_id INT, CONSTRAINT fk_galaxy FOREIGN KEY(galaxy_id) REFERENCES galaxy(galaxy_id)); 
 
 INSERT INTO galaxy(name, description, has_life, age_in_million_years) 
