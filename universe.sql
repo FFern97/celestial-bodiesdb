@@ -57,3 +57,39 @@ INSERT INTO planet (name, has_life, size_in_km, been_explored, star_id)
      ('PLANET11', FALSE, 7823, FALSE, 3),
      ('PLANET12', FALSE, 4512, FALSE, 4);
 
+INSERT INTO moon (name, distance_from_planet, size_in_km, planet_id)
+
+
+  VALUES 
+
+     ('MOON1', 1235645, 6845, 12),
+     ('MOON2', 145987, 596, 6),
+     ('MOON3', 256987, 485, 4),
+     ('MOON4', 78956, 1000, 8),
+     ('MOON5', 56951, 123, 3,
+     ('MOON6', 84756, 1140 7),
+     ('MOON7', 22365, 845, 9),
+     ('MOON8', 147852, 784, 2),
+     ('MOON9', 32014, 322, 5),
+     ('MOON10', 99852, 754, 1),
+     ('MOON11', 111236, 777, 1),
+     ('MOON12', 108562, 569, 8),
+     ('MOON13', 78451, 944, 11),
+     ('MOON14', 65321, 1111, 12),
+     ('MOON15', 102458, 221, 10),
+     ('MOON16', 45621, 593, 7),
+     ('MOON17', 135740, 2021, 7),
+     ('MOON18', 66891, 1589, 3),
+     ('MOON19', 23235, 2301, 1),
+     ('MOON20', 144512, 678, 2);
+     
+INSERT INTO black_hole (name, age_in_million_years, distance_from_earth, galaxy_id)
+
+   VALUES 
+
+     (BLACKHOLE1, 4526, 178986, 5),
+     (BLACKHOLE2, 12356, 156231, 4),
+     (BLACKHOLE3, 2356, 132547, 3),
+     (BLACKHOLE4, 9756, 182463, 1),
+     (BLACKHOLE5, 7784, 145672, 2),
+     (BLACKHOLE6, 6921, 135789, 6); 
