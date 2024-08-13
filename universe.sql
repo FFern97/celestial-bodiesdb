@@ -5,7 +5,7 @@ CREATE DATABASE universe;
 \c universe; 
 
 
-CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name TEXT NOT NULL UNIQUE, description VARCHAR (255), has_life BOOLEAN, age_in_million_years INT);
+CREATE TABLE galaxy (galaxy_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR NOT NULL UNIQUE, description TEXT, has_life BOOLEAN, age_in_million_years INT);
 
 
 CREATE TABLE star (star_id SERIAL PRIMARY KEY NOT NULL, name VARCHAR(50) NOT NULL UNIQUE, age_in_million_years NUMERIC, size_in_km INT NOT NULL, mass INT, galaxy_id INT, 
