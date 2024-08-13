@@ -34,11 +34,11 @@ INSERT INTO star (name, age_in_million_years, size_in_km, mass, galaxy_id)
   
   VALUES
     ('STAR1', 16564, 19222, 4, 'GALAXY4'),
-    ('STAR1', 9568, 12145, 3, 'GALAXY6'),
-    ('STAR1', 11364, 1456, 3, 'GALAXY1'),
-    ('STAR1', 6564, 89985, 1, 'GALAXY3'),
-    ('STAR1', 14520, 13658, 5, 'GALAXY2'),
-    ('STAR1', 18315, 22356, 7, 'GALAXY5');
+    ('STAR2', 9568, 12145, 3, 'GALAXY6'),
+    ('STAR3', 11364, 1456, 3, 'GALAXY1'),
+    ('STAR4', 6564, 89985, 1, 'GALAXY3'),
+    ('STAR5', 14520, 13658, 5, 'GALAXY2'),
+    ('STAR6', 18315, 22356, 7, 'GALAXY5');
 
 INSERT INTO planet (name, has_life, size_in_km, been_explored, star_id)
 
@@ -87,9 +87,9 @@ INSERT INTO black_hole (name, age_in_million_years, distance_from_earth, galaxy_
 
    VALUES 
 
-     (BLACKHOLE1, 4526, 178986, 'GALAXY5'),
-     (BLACKHOLE2, 12356, 156231,'GALAXY4'),
-     (BLACKHOLE3, 2356, 132547, 'GALAXY3'),
-     (BLACKHOLE4, 9756, 182463, 'GALAXY1'),
-     (BLACKHOLE5, 7784, 145672, 'GALAXY2'),
-     (BLACKHOLE6, 6921, 135789, 'GALAXY6'); 
+     ('BLACKHOLE1', 4526, 178986, 'GALAXY5'),
+     ('BLACKHOLE2', 12356, 156231, 'GALAXY4'),
+     ('BLACKHOLE3', 2356, 132547, 'GALAXY3'),
+     ('BLACKHOLE4', 9756, 182463, 'GALAXY1'),
+     ('BLACKHOLE5', 7784, 145672, 'GALAXY2'),
+     ('BLACKHOLE6', 6921, 135789, 'GALAXY6'); 
